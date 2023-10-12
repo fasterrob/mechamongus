@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mechamongus</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo/Blue-amongus-icon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <style>
+    body {
+      background: linear-gradient(10deg, #6fbdfd, #ee8ae7);
+    }
+  </style>
+
+  <body>
+    <div class="container py-5 h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+          <div
+            class="card shadow-2-strong card-registration"
+            style="border-radius: 15px"
+          >
+            <div class="card-body p-4 p-md-5">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration</h3>
+              <form>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <div class="form-outline">
+                      <label class="form-label" for="fullname">Fullname</label>
+                      <input
+                        type="text"
+                        id="fullName"
+                        class="form-control form-control-lg"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <div class="form-outline">
+                      <label class="form-label" for="username">Username</label>
+                      <input
+                        type="text"
+                        id="username"
+                        class="form-control form-control-lg"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-3 d-flex align-items-center">
+                    <div class="form-outline datepicker w-100">
+                      <label class="form-label" for="email">Email</label>
+                      <input
+                        type="email"
+                        class="form-control form-control-lg"
+                        id="email"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <div class="form-outline">
+                      <label class="form-label" for="phoneNumber"
+                        >Phone Number</label
+                      >
+                      <input
+                        type="text"
+                        id="phoneNumber"
+                        class="form-control form-control-lg"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12 mb-3 pb-2">
+                  <div class="form-outline">
+                    <label class="form-label" for="gender">Gender</label>
+                    <select class="form-select form-control form-control-lg">
+                      <option selected value="1">Male</option>
+                      <option value="2">Female</option>
+                      <option value="3">Prefer not to say</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-3 pb-2">
+                    <div class="form-outline">
+                      <label class="form-label" for="password"
+                        >Password</label
+                      >
+                      <input
+                        type="password"
+                        id="password"
+                        class="form-control form-control-lg"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3 pb-2">
+                    <div class="form-outline">
+                      <label class="form-label" for="confirmPassword"
+                        >Confirm Password</label
+                      >
+                      <input
+                        type="password"
+                        id="confirmPassword"
+                        class="form-control form-control-lg"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-4 pt-2 d-flex justify-content-center w-100">
+                  <input
+                    class="btn btn-primary btn-lg w-100"
+                    type="button"
+                    onclick="register()"
+                    value="Register"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../node_modules/axios/dist/axios.min.js"></script>
+  <script>
+    function register() {
+      const fullname = document.getElementById("fullName").value;
+      const username = document.getElementById("username").value;
+      const email = document.getElementById("email").value;
+      const phonenumber = document.getElementById("phoneNumber").value;
+      const password = document.getElementById("password").value;
+      const confirmpassword = document.getElementById("confirmPassword").value;
+      const gender = "male";
+
+      if (password === confirmpassword) {
+        axios
+          .post("http://localhost:3000/login/register", {
+            fullname,
+            username,
+            email,
+            phonenumber,
+            password,
+            gender,
+          })
+          .then(
+            (response) => {
+              window.location.href = "login.html";
+            },
+            (error) => {
+              console.log(error);
+            }
+          );
+      }
+    }
+  </script>
+</html>

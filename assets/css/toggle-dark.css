@@ -1,0 +1,43 @@
+/* toggle dark mode button starts */
+.toggle{
+    margin-left: 50px;
+    position: absolute;
+    height: 30px;
+    width: 60px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100px;
+    box-shadow: 0px 5px 10px #ffffffce;
+    border: 1px solid rgba(0, 0, 0, 0.456);
+    cursor: pointer;
+}
+
+
+.toggle::before{
+    content: '';
+    position: absolute;
+    height: 23px;
+    width: 23px;
+    background: hsl(231, 69%, 60%);;
+    border-radius: 50%;
+    top: 48.7%;
+    left: 2.6px;
+    transform: translateY(-50%);
+    transition: all .2s ease-in-out;
+}
+
+
+.toggle.active::before{
+    background-color: #4d4d4dd2;
+    left: calc(100% - 23px - 2.6px);
+}
+
+
+main{
+    transition: all .2s ease-in-out;
+}
+
+
+main.dark{
+    background-color: #4d4d4dd2;    
+}
+/* toggle dark mode button ends */

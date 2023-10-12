@@ -1,0 +1,118 @@
+:root {
+    --salmon-pink: hsl(207, 100%, 66.3%);
+}
+
+
+.product-solo-container {
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-solo {
+    width: 90%;
+    max-width: 750px;
+    display: flex;
+}
+
+.gallery {
+    flex-basis: 47%;
+    transform: scale(1.08);
+    box-shadow: -10px 5px 10px 10px rgb(181, 181, 181, 0.3);
+    background: white;
+    position: relative;
+}
+
+.gallery img {
+    width: 100%;
+    display: block;
+    padding-top: 20px;
+    background: white;
+}
+
+.detail {
+    flex-basis: 53%;
+    padding: 40px;
+    padding-left: 60px;
+    box-shadow: -10px 5px 10px 10px rgb(181, 181, 181, 0.3);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.detail h1 {
+    font-size: 27px;
+    margin-bottom: 1px;
+}
+
+.detail h2 {
+    color: var(--salmon-pink);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 17px;
+}
+
+/* .detail h3 {
+    color: var(--salmon-pink);
+    margin-bottom: 20px;
+} */
+
+.product-description {
+    font-size: 14px;
+}
+
+.quantity-select {
+    display: flex;
+    align-items: center;
+    margin-top: 17px;
+    margin-bottom: 15px;
+}
+
+.quantity-select p {
+    width: 85px;
+}
+
+.quantity-select input {
+    border: 0.1;
+    outline: 0;
+    padding: 2px 2px 2px 15px;
+    width: 50px;
+    border-radius: 12px;
+}
+
+form button {
+    background-color: var(--salmon-pink);
+    color: white;
+    font-size: 17px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 30px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: hsl(207, 73%, 58%);
+}
+
+.control {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+}
+
+.btn {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgb(199, 199, 199);
+    margin: 10px;
+    cursor: pointer;
+}
+
+.btn.active {
+    background-color: var(--salmon-pink);
+}

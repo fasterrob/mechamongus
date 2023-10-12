@@ -1,7 +1,7 @@
 # mechamongus
 INT-303
 
-# install
+# Install
 npm install
 
 # Run

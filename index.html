@@ -66,13 +66,13 @@
           </div>
 
           <div class="header-user-actions">
-            <button class="action-btn">
-              <a href="login.html">
+            <button class="action-btn" onclick="checkLogin()">
+              
                 <ion-icon
                   name="person-outline"
                   style="color: aliceblue"
                 ></ion-icon>
-              </a>
+              
             </button>
 
             <button class="action-btn">
@@ -235,7 +235,7 @@
 
             <!-- Custom spec -->
             <li class="menu-category">
-              <a href="#" class="menu-title">Customize</a>
+              <a href="cuztom-page.html" class="menu-title">Customize</a>
             </li>
           </ul>
         </div>
@@ -2839,6 +2839,20 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script>
+      function checkLogin(){
+        const email = localStorage.getItem("email")
+        console.log(email)
+        if(email){
+          location.href = "./user-profile.html"
+        }
+        else{
+          location.href = "./login.html"
+          
+        }
+
+      }
+    </script>
   </body>
 </html>
 

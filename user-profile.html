@@ -63,10 +63,10 @@
 
         <div class="header-user-actions">
 
-          <button class="action-btn">
-            <a href="login.html">
+          <button class="action-btn" onclick="checkLogin()">
+            
               <ion-icon name="person-outline" style="color: aliceblue;"></ion-icon>
-            </a>
+            
           </button>
 
           <button class="action-btn">
@@ -548,18 +548,12 @@
                 <hr>
                 <div class="row">
                     <div class="col-sm-12">
-                        <a class="btn btn-info " target="__blank"
-                            href="user-edit.html" style="background-color: hsl(207, 100%, 66.3%);">
-                            Edit
-                        </a>
+                      <button class="btn" style="background-color: hsl(207, 100%, 66.3%);" onclick="edit()">Edit</button>
                     </div>
                 </div>
                 <div class="row" style="padding-top: 10px;">
                     <div class="col-sm-12">
-                        <a class="btn btn-info " target="__blank"
-                            href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills" style="background-color: hsl(0, 100%, 66%);">
-                            Sign out
-                        </a>
+                        <button class="btn btn-danger" onclick="signOut()">Sign Out</button>
                     </div>
                 </div>
             </div>
@@ -741,7 +735,28 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    function checkLogin(){
+      const email = localStorage.getItem("email")
+      console.log(email)
+      if(email){
+        location.href = "./user-profile.html"
+      }
+      else{
+        location.href = "./login.html"
+        
+      }
 
+    }
+    function signOut(){
+      localStorage.removeItem("email");
+      localStorage.removeItem("password");
+      location.href = "./index.html"
+    }
+    function edit(){  
+      location.href = "./user-edit.html"
+    }
+  </script>
 </body>
 
 </html>

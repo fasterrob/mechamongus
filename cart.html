@@ -153,6 +153,18 @@
   .text-primary{
     color: hsl(207, 100%, 66.3%);
   }
+  .btnhover{
+    font-weight: bold;
+    color: white;
+  }
+
+  .btnhover:hover{
+    color: white;
+    font-weight: bold;
+    background-color: hsl(207, 74%, 60%) !important;
+
+  }
+
 </style>
 
 <body>
@@ -723,20 +735,20 @@
     
                       <div class="form-outline mb-5">
                         <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
-                          value="1234 5678 9012 3457" minlength="19" maxlength="19" />
+                          value="" minlength="19" maxlength="19" />
                         <label class="form-label" for="typeText">Card Number</label>
                       </div>
     
                       <div class="form-outline mb-5">
                         <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
-                          value="John Smith" />
+                          value="" />
                         <label class="form-label" for="typeName">Name on card</label>
                       </div>
     
                       <div class="row">
                         <div class="col-md-6 mb-5">
                           <div class="form-outline">
-                            <input type="text" id="typeExp" class="form-control form-control-lg" value="01/22"
+                            <input type="text" id="typeExp" class="form-control form-control-lg" value=""
                               size="7" id="exp" minlength="7" maxlength="7" />
                             <label class="form-label" for="typeExp">Expiration</label>
                           </div>
@@ -744,7 +756,7 @@
                         <div class="col-md-6 mb-5">
                           <div class="form-outline">
                             <input type="password" id="typeText" class="form-control form-control-lg"
-                              value="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
+                              value="" size="1" minlength="3" maxlength="3" />
                             <label class="form-label" for="typeText">CVV</label>
                           </div>
                         </div>
@@ -753,10 +765,15 @@
                       <p class="mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit <a
                           href="#!">obcaecati sapiente</a>.</p>
     
-                      <button type="button" class="btn btn-primary btn-block btn-lg" style="background-color: hsl(207, 100%, 66.3%);">Checkout</button>
+                      <button type="button" class="btnhover btn" style="background-color: hsl(207, 100%, 66.3%);">
+                        Checkout
+                      </button>
     
-                      <h5 class="fw-bold mb-5" style="position: absolute; bottom: 0; color: hsl(207, 100%, 66.3%);">
-                        <a href="index.html"><i class="fas fa-angle-left me-2"></i>Back to shopping</a>
+                      <h5 class="fw-bold mb-5" style="position: absolute; bottom: 0;">
+                        <a href="index.html" style="color: hsl(207, 100%, 66.3%);">
+                          <i class="fas fa-angle-left me-2">
+                          </i>Back to shopping
+                        </a>
                       </h5>
     
                     </form>

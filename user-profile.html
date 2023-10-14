@@ -30,10 +30,22 @@
 
 </head>
 
+<style>
+  .edit-btn {
+    background-color: hsl(207, 100%, 66.3%);
+  }
+  .edit-btn:hover {
+    background-color: hsl(207, 74%, 60%);
+  } 
+  .signout-btn {
+    background-color: hsl(0, 100%, 66%); 
+  }
+  .signout-btn:hover {
+    background-color: rgb(238, 0, 0) !important;
+  }
+</style>
+
 <body>
-
-
-  <div class="overlay" data-overlay></div>
 
 
   <!--
@@ -514,7 +526,7 @@
                         <h6 class="mb-0">Email</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                        <a class="__cf_email__"
                             data-cfemail="37515e47775d425c5a425f19565b">[email&#160;protected]</a>
                     </div>
                 </div>
@@ -548,12 +560,19 @@
                 <hr>
                 <div class="row">
                     <div class="col-sm-12">
-                      <button class="btn" style="background-color: hsl(207, 100%, 66.3%);" onclick="edit()">Edit</button>
+                      <button class="edit-btn btn" 
+                      style="color: white; border-radius: 20px; 
+                      padding: 5px 20px 5px 20px; 
+                      border: 0;
+                      padding: 5px 15px 5px 15px;" onclick="edit()">Edit</button>
                     </div>
                 </div>
                 <div class="row" style="padding-top: 10px;">
                     <div class="col-sm-12">
-                        <button class="btn btn-danger" onclick="signOut()">Sign Out</button>
+                        <button class="signout-btn btn btn-danger" 
+                        style="border-radius: 20px; 
+                        border: 0;
+                        padding: 5px 15px 5px 15px;" onclick="signOut()">Sign Out</button>
                     </div>
                 </div>
             </div>

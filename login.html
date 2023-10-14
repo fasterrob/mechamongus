@@ -226,9 +226,11 @@
           (response) => {
             const resEmail = response.data.email;
             const resPassword = response.data.password;
+            const resId = response.data._id
             if (email === resEmail && password === resPassword) {
               localStorage.setItem("email", resEmail);
               localStorage.setItem("password", resPassword);
+              localStorage.setItem("id", resId)
               window.location.href = "../index.html";
             }
           },

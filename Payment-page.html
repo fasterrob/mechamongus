@@ -13,7 +13,8 @@
     - favicon
   -->
   <link rel="shortcut icon" href="./assets/images/logo/Blue-amongus-icon.png" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <!--
     - custom css link
   -->
@@ -34,9 +35,10 @@
   .custom-checkout {
     background-color: hsl(207, 100%, 66.3%);
   }
+
   .custom-checkout:hover {
     background-color: hsl(207, 74%, 60%);
-  } 
+  }
 </style>
 
 <body>
@@ -70,12 +72,12 @@
 
         <div class="header-user-actions">
 
-          <button class="action-btn" onclick="checkLogin()">           
-              <ion-icon name="person-outline" style="color: aliceblue;"></ion-icon>            
+          <button class="action-btn" onclick="checkLogin()">
+            <ion-icon name="person-outline" style="color: aliceblue;"></ion-icon>
           </button>
 
           <button class="action-btn" onclick="checkLoginCart()">
-              <ion-icon name="bag-handle-outline" style="color: aliceblue;"></ion-icon>
+            <ion-icon name="bag-handle-outline" style="color: aliceblue;"></ion-icon>
 
             <span class="count">0</span>
           </button>
@@ -495,43 +497,34 @@
   <form>
     <div class="form-floating w-50 mx-auto mt-6">
       <ul class="list-group list-group-flush">
-        <li class="list-group-item list-group-item-action list-group-item-danger" aria-current="true">กรุณากรอกข้อมูล
+        <li class="list-group-item list-group-item-action list-group-item-danger" aria-current="true">Enter you
+          information
         </li>
         <li class="list-group-item">
           <div class="mb-3 position-relative">
-            <label for="getcontact" class="form-label">Contact</label>
-            <input class="form-control " type="text" placeholder="Name-Surname" aria-label="default input example"
+            <label for="getcontact" class="form-label">Name on card</label>
+            <input class="form-control " type="text" placeholder="" aria-label="default input example"
               id="getcontact-name" required>
-            <label for="getcontact-tel" class="form-label my-2">Phone Number</label>
-            <input class="form-control" type="text" placeholder="tel.06x-xxx-xxxx" aria-label="default input example"
-              id="getcontact-tel" required>
+            <label for="getcontact-card" class="form-label my-2">Card Number</label>
+            <input class="form-control" type="number" placeholder="" aria-label="default input example"
+              id="getcontact-cardnum" required>
           </div>
-          <!-- <div class="mb-3">
-            <label for="address" class="form-label">Address</label>
-            <input class="form-control" placeholder="Province, District, zip code, (house number/alley/road)"
-              id="getaddress" rows="3" required>
-          </div> -->
-        </li>
-        <li class="list-group-item">
           <div class="row g-3 mb-3">
             <div class="col-md-6">
               <label for="Paymethod" class="form-label">Payment method</label>
               <select class="form-select" id="getPaymethod" required>
-                <option selected disabled value="">Choose...</option>
+                <option selected disabled value="">-</option>
                 <option>VISA</option>
                 <option>MASTER CARD</option>
-                <!-- <option>COD(skip this section)</option> -->
               </select>
             </div>
             <div class="col-md-3">
               <label for="cvv" class="form-label">CVV/CVC</label>
-              <input type="text" class="form-control" id="getcvv" placeholder="xxx">
+              <input type="password" class="form-control" id="getcvv" placeholder="">
             </div>
             <div class="col-md-3">
               <label for="expdate" class="form-label">Expiration date</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="getexpdate" placeholder="DD/MM/YYYY">
-              </div>
+              <input type="month" class="form-control" id="getdate" placeholder="">
             </div>
           </div>
         </li>
@@ -578,8 +571,7 @@
           </div>
           <div class="col-12 mt-1 mb-3 d-flex justify-content-center">
             <a href="payment-checked.html">
-              <button class="custom-checkout btn btn-primary px-5" type="submit" 
-            style="border: 0; 
+              <button class="custom-checkout btn btn-primary px-5" type="submit" style="border: 0; 
               border-radius: 20px;
               padding: 7px 20px 7px 20px;">Checkout</button>
             </a>

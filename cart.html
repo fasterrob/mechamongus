@@ -153,6 +153,18 @@
   .text-primary{
     color: hsl(207, 100%, 66.3%);
   }
+  .btnhover{
+    font-weight: bold;
+    color: white;
+  }
+
+  .btnhover:hover{
+    color: white;
+    font-weight: bold;
+    background-color: hsl(207, 74%, 60%) !important;
+
+  }
+
 </style>
 
 <body>
@@ -753,10 +765,15 @@
                       <p class="mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit <a
                           href="#!">obcaecati sapiente</a>.</p>
     
-                      <button type="button" class="btn btn-primary btn-block btn-lg" style="background-color: hsl(207, 100%, 66.3%);">Checkout</button>
+                      <button type="button" class="btnhover btn" style="background-color: hsl(207, 100%, 66.3%);">
+                        Checkout
+                      </button>
     
-                      <h5 class="fw-bold mb-5" style="position: absolute; bottom: 0; color: hsl(207, 100%, 66.3%);">
-                        <a href="index.html"><i class="fas fa-angle-left me-2"></i>Back to shopping</a>
+                      <h5 class="fw-bold mb-5" style="position: absolute; bottom: 0;">
+                        <a href="index.html" style="color: hsl(207, 100%, 66.3%);">
+                          <i class="fas fa-angle-left me-2">
+                          </i>Back to shopping
+                        </a>
                       </h5>
     
                     </form>

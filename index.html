@@ -75,14 +75,11 @@
               
             </button>
 
-            <button class="action-btn">
-              <a href="cart.html">
+            <button class="action-btn" onclick="checkLoginCart()">          
                 <ion-icon
                   name="bag-handle-outline"
                   style="color: aliceblue"
                 ></ion-icon>
-              </a>
-
               <span class="count">0</span>
             </button>
           </div>
@@ -2839,20 +2836,7 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <script>
-      function checkLogin(){
-        const email = localStorage.getItem("email")
-        console.log(email)
-        if(email){
-          location.href = "./user-profile.html"
-        }
-        else{
-          location.href = "./login.html"
-          
-        }
 
-      }
-    </script>
   </body>
 </html>
 

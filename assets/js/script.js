@@ -56,3 +56,30 @@ for (let i = 0; i < accordionBtn.length; i++) {
 
 }
 
+// check login
+function checkLogin(){
+  const email = localStorage.getItem("email")
+  console.log(email)
+  if(email){
+    location.href = "./user-profile.html"
+  }
+  else{
+    location.href = "./login.html"
+    
+  }
+
+}
+
+// check login cart page
+function checkLoginCart(){
+  const email = localStorage.getItem("email")
+  console.log(email)
+  if(email){
+    location.href = "./cart.html"
+  }
+  else{
+    location.href = "./login.html"
+    
+  }
+
+}

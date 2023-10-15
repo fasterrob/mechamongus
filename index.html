@@ -2830,13 +2830,11 @@
   <script type="text/javascript">
     async function getData() {
       const userId = localStorage.getItem("id");
-      console.log("data");
       const countCart = await axios.get(
         `http://localhost:3000/cart/byid?id=${userId}`
       );
-      console.log(countCart.data.productList.length);
       document.getElementById("count").innerHTML =
-        countCart.data.productList.length;
+        countCart.data.productList?.length || 0;
     }
 
     async function addCart() {

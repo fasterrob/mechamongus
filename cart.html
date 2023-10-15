@@ -780,13 +780,11 @@
                             </div>
                           </div>
                         </div>
-                        <a
-                          href="payment-checked.html"
-                          class="d-flex justify-content-center"
-                        >
+                        <a class="check-out d-flex justify-content-center">
                           <button
                             type="button"
                             class="btnhover btn"
+                            onclick="checkOut()"
                             style="
                               background-color: hsl(207, 100%, 66.3%);
                               border-radius: 20px;
@@ -795,7 +793,7 @@
                             Checkout
                           </button>
                         </a>
-                        <h5 class="fw-bold my-3 d-flex justify-content-center">
+                        <h5 class="fw-bold my-4 d-flex justify-content-center">
                           <a href="index.html" class="back-to-shopping">
                             <!-- <i class=" fas fa-angle-left me-2">
                           </i> -->
@@ -968,17 +966,17 @@
     src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
   ></script>
   <script type="text/javascript">
+    var totalPrice = 0;
     async function getData() {
       const id = localStorage.getItem("id");
-
       axios
         .get(`http://localhost:3000/cart/byid?id=${id}`)
         .then((resposnse) => {
           const productList = resposnse.data.productList;
-          console.log(productList);
           let tab = "";
-          let totalPrice = 0;
+          // let totalPrice = 0;
           let count = 0;
+          totalPrice = 0;
           productList.forEach(function (item) {
             totalPrice += item.price;
             tab += ` <div class="d-flex align-items-center mb-5">
@@ -1026,6 +1024,32 @@
       } catch (error) {
         console.error(error);
       }
+    }
+
+    async function checkOut() {
+      const id = localStorage.getItem("id");
+      let fullname = "";
+      let address = "";
+      await axios
+        .get(`http://localhost:3000/admin/user/byId?id=${id}`)
+        .then((resposnse) => {
+          fullname = resposnse.data.fullname;
+          address = resposnse.data.address;
+        });
+
+      await axios.post(`http://localhost:3000/order`, {
+        userId: id,
+        name: fullname,
+        orderstatus: "Order Placed",
+        price: totalPrice,
+        address: address,
+      });
+
+      await axios
+        .delete(`http://localhost:3000/cart/removecart?id=${id}`)
+        .then((response) => {
+          location.href = "./payment-checked.html";
+        });
     }
   </script>
 </html>

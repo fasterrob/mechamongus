@@ -41,7 +41,7 @@
   }
 </style>
 
-<body>
+<body onload="getData()">
 
   <!-- <div class="overlay" data-overlay></div> -->
 
@@ -79,7 +79,7 @@
           <button class="action-btn" onclick="checkLoginCart()">
             <ion-icon name="bag-handle-outline" style="color: aliceblue;"></ion-icon>
 
-            <span class="count">0</span>
+            <span class="count" id="count">0</span>
           </button>
 
         </div>
@@ -99,120 +99,6 @@
           <li class="menu-category">
             <a href="index.html" class="menu-title">Home</a>
           </li>
-
-          <!-- category -->
-          <!-- <li class="menu-category">
-            <a class="menu-title">Category</a>
-
-            <div class="dropdown-panel">
-
-              gaming list
-              <ul class="dropdown-panel-list">
-
-                <li class="menu-title">
-                  <a href="gaming-cate.html">Gaming</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">NVidia</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">AMD</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">Asus</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">MSI</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">GIGABYTE</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">ZOTAC</a>
-                </li>
-
-              </ul>
-
-              editing list
-              <ul class="dropdown-panel-list">
-
-                <li class="menu-title">
-                  <a href="editing-cate.html">Editing</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">AMD</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">Intel</a>
-                </li>
-
-              </ul>
-
-              Casual list
-              <ul class="dropdown-panel-list">
-
-                <li class="menu-title">
-                  <a href="casual-cate.html">Casual</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">All in one</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">Full set PC</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">PC Only</a>
-                </li>
-
-              </ul>
-
-              budget list
-              <ul class="dropdown-panel-list">
-
-                <li class="menu-title">
-                  <a href="budget-cate.html">Budget</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">ต่ำกว่า 19,990฿</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">20,000฿ - 29,990฿</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">30,000฿ - 39,990฿</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">40,000฿ - 49,990฿</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">50,000฿ - 59,990฿</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">60,000฿ ขึ้นไป</a>
-                </li>
-
-              </ul>
-
-            </div>
-
-          </li> -->
 
           <!-- gaming -->
           <li class="menu-category">
@@ -282,147 +168,6 @@
       </div>
 
       <ul class="mobile-menu-category-list">
-
-        <!-- gaming mobile category
-        <li class="menu-category">
-
-          <button class="accordion-menu" data-accordion-btn>
-            <p class="menu-title">Gaming</p>
-
-            <div>
-              <ion-icon name="add-outline" class="add-icon"></ion-icon>
-              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-            </div>
-          </button>
-
-          <ul class="submenu-category-list" data-accordion>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">Nvidia</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">AMD</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">Asus</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">MSI</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">GIGABYTE</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">ZOTAC</a>
-            </li>
-
-          </ul>
-
-        </li>
-
-        Editing mobile category
-        <li class="menu-category">
-
-          <button class="accordion-menu" data-accordion-btn>
-            <p class="menu-title">Editing</p>
-
-            <div>
-              <ion-icon name="add-outline" class="add-icon"></ion-icon>
-              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-            </div>
-          </button>
-
-          <ul class="submenu-category-list" data-accordion>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">AMD</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">Intel</a>
-            </li>
-
-          </ul>
-
-        </li>
-
-        Casual mobile category
-        <li class="menu-category">
-
-          <button class="accordion-menu" data-accordion-btn>
-            <p class="menu-title">Casual</p>
-
-            <div>
-              <ion-icon name="add-outline" class="add-icon"></ion-icon>
-              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-            </div>
-          </button>
-
-          <ul class="submenu-category-list" data-accordion>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">All in one</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">Full set PC</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">Full set PC</a>
-            </li>
-
-          </ul>
-
-        </li>
-
-        budget mobile category
-        <li class="menu-category">
-
-          <button class="accordion-menu" data-accordion-btn>
-            <p class="menu-title">Budget</p>
-
-            <div>
-              <ion-icon name="add-outline" class="add-icon"></ion-icon>
-              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-            </div>
-          </button>
-
-          <ul class="submenu-category-list" data-accordion>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">ต่ำกว่า 19,990฿</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">20,000฿ - 29,990฿</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">30,000฿ - 39,990฿</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">40,000฿ - 49,990฿</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">50,000฿ - 59,990฿</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">60,000฿ ++</a>
-            </li>
-
-          </ul>
-
-        </li> -->
-
         <!-- gaming mobile category -->
         <li class="menu-category">
           <a href="gaming-cate.html" class="menu-title">Gaming</a>
@@ -529,23 +274,21 @@
           </div>
         </li>
         <li class="list-group-item">Product list
-          <input class="form-control mt-1" type="text" value="Disabled readonly input"
+          <input class="form-control mt-1" type="text" value="" id="cpu"
             aria-label="Disabled input example" disabled readonly>
-          <input class="form-control mt-1" type="text" value="Disabled readonly input"
+          <input class="form-control mt-1" type="text" value="" id="mainboard"
             aria-label="Disabled input example" disabled readonly>
-          <input class="form-control mt-1" type="text" value="Disabled readonly input"
+          <input class="form-control mt-1" type="text" value="" id="gpu"
             aria-label="Disabled input example" disabled readonly>
-          <input class="form-control mt-1" type="text" value="Disabled readonly input"
+          <input class="form-control mt-1" type="text" value="" id="ram"
             aria-label="Disabled input example" disabled readonly>
-          <input class="form-control mt-1" type="text" value="Disabled readonly input"
+          <input class="form-control mt-1" type="text" value="" id="hdd"
             aria-label="Disabled input example" disabled readonly>
-          <input class="form-control mt-1" type="text" value="Disabled readonly input"
+          <input class="form-control mt-1" type="text" value="" id="ssd"
             aria-label="Disabled input example" disabled readonly>
-          <input class="form-control mt-1" type="text" value="Disabled readonly input"
+          <input class="form-control mt-1" type="text" value="" id="psu"
             aria-label="Disabled input example" disabled readonly>
-          <input class="form-control mt-1" type="text" value="Disabled readonly input"
-            aria-label="Disabled input example" disabled readonly>
-          <input class="form-control mt-1 mb-" type="text" value="Disabled readonly input"
+          <input class="form-control mt-1" type="text" value="" id="cased"
             aria-label="Disabled input example" disabled readonly>
         </li>
         <div class="d-flex justify-content-between p-2 mb-2 mt-2" style="background-color: #e1f5fe;">
@@ -738,17 +481,46 @@
 
   </footer>
 
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
+
+<script src="./assets/js/script.js"></script>
+<script src="../node_modules/axios/dist/axios.min.js"></script>
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+></script>
+
+<script type="text/javascript">
+
+async function getData() {
+      const userId = localStorage.getItem("id");
+      console.log("data");
+      const countCart = await axios.get(
+        `http://localhost:3000/cart/byid?id=${userId}`
+      );
+      console.log(countCart.data.productList.length);
+      document.getElementById("count").innerHTML =
+        countCart.data.productList.length;
+
+    const data = await axios.get(
+        `http://localhost:3000/customize/byid?id=${userId}`
+      );
+    console.log(data.data)
+    const customize = data.data
+    document.getElementById("cpu").value = customize.cpu
+    document.getElementById("mainboard").value = customize.mainboard
+    document.getElementById("gpu").value = customize.gpu
+    document.getElementById("ram").value = customize.ram
+    document.getElementById("hdd").value = customize.hdd
+    document.getElementById("ssd").value = customize.ssd
+    document.getElementById("psu").value = customize.psu
+    document.getElementById("cased").value = customize.cased
+    }
+
+</script>
 
 </html>

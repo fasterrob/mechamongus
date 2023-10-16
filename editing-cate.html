@@ -44,7 +44,7 @@
     <div class="header-main">
 
       <div class="container">
-        
+
         <a href="#" class="header-logo">
           <img src="assets/images/logo/Blue-amongus-icon.png" alt="Anon's logo" width="36" height="36">
         </a>
@@ -61,15 +61,15 @@
 
         <div class="header-user-actions">
 
-        <button class="action-btn" onclick="checkLogin()">           
-            <ion-icon name="person-outline" style="color: aliceblue;"></ion-icon>            
-        </button>
+          <button class="action-btn" onclick="checkLogin()">
+            <ion-icon name="person-outline" style="color: aliceblue;"></ion-icon>
+          </button>
 
-        <button class="action-btn" onclick="checkLoginCart()">
+          <button class="action-btn" onclick="checkLoginCart()">
             <ion-icon name="bag-handle-outline" style="color: aliceblue;"></ion-icon>
 
-          <span class="count">0</span>
-        </button>
+            <span class="count">0</span>
+          </button>
 
         </div>
 
@@ -226,7 +226,7 @@
 
           <!-- Custom spec -->
           <li class="menu-category">
-            <a href="cuztom-page.html" class="menu-title">Customize</a>
+            <a class="menu-title" onclick="checkLoginCustom()">Customize</a>
           </li>
 
         </ul>
@@ -531,7 +531,7 @@
                     <a href="gaming-cate.html">
                       <p class="menu-title">Gaming</p>
                     </a>
-                    
+
                   </div>
 
                   <!-- <div>
@@ -598,10 +598,10 @@
                     <img src="./assets/images/logo/editing-sidebar-cate.png" alt="perfume" class="menu-title-img"
                       width="20" height="20">
 
-                      <a href="editing-cate.html">
-                        <p class="menu-title">Editing</p>
-                      </a>
-                    
+                    <a href="editing-cate.html">
+                      <p class="menu-title">Editing</p>
+                    </a>
+
                   </div>
 
                   <!-- <div>
@@ -643,7 +643,7 @@
                     <a href="casual-cate.html">
                       <p class="menu-title">Casual</p>
                     </a>
-                    
+
                   </div>
 
                   <!-- <div>
@@ -692,7 +692,7 @@
                     <a href="budget-cate.html">
                       <p class="menu-title">Budget</p>
                     </a>
-                    
+
                   </div>
 
                   <!-- <div>
@@ -785,7 +785,7 @@
 
           <div class="product-main">
 
-              <h2 class="product-title">Editing</h2>
+            <h2 class="product-title">Editing</h2>
 
             <div class="product-grid">
 
@@ -3003,7 +3003,25 @@
 
   </footer>
 
+  <!-- 
+    script
+   -->
 
+  <script>
+    // check login custom page
+    function checkLoginCustom() {
+      const email = localStorage.getItem("email")
+      console.log(email)
+      if (email) {
+        location.href = "./cuztom-page.html"
+      }
+      else {
+        location.href = "./login.html"
+
+      }
+
+    }
+  </script>
 
   <!--
     - custom js link

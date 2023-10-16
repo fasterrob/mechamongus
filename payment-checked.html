@@ -254,7 +254,7 @@
 
           <!-- Custom spec -->
           <li class="menu-category">
-            <a href="cuztom-page.html" class="menu-title">Customize</a>
+            <a class="menu-title" onclick="checkLoginCustom()">Customize</a>
           </li>
 
         </ul>
@@ -700,6 +700,26 @@
   </footer>
 
 
+
+  <!-- 
+    script
+   -->
+
+  <script>
+    // check login custom page
+    function checkLoginCustom() {
+      const email = localStorage.getItem("email")
+      console.log(email)
+      if (email) {
+        location.href = "./cuztom-page.html"
+      }
+      else {
+        location.href = "./login.html"
+
+      }
+
+    }
+  </script>
 
   <!--
     - custom js link

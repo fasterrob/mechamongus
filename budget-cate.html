@@ -62,12 +62,12 @@
 
         <div class="header-user-actions">
 
-          <button class="action-btn" onclick="checkLogin()">           
-              <ion-icon name="person-outline" style="color: aliceblue;"></ion-icon>            
+          <button class="action-btn" onclick="checkLogin()">
+            <ion-icon name="person-outline" style="color: aliceblue;"></ion-icon>
           </button>
 
           <button class="action-btn" onclick="checkLoginCart()">
-              <ion-icon name="bag-handle-outline" style="color: aliceblue;"></ion-icon>
+            <ion-icon name="bag-handle-outline" style="color: aliceblue;"></ion-icon>
 
             <span class="count">0</span>
           </button>
@@ -89,120 +89,6 @@
           <li class="menu-category">
             <a href="index.html" class="menu-title">Home</a>
           </li>
-
-          <!-- category -->
-          <!-- <li class="menu-category">
-            <a class="menu-title">Category</a>
-
-            <div class="dropdown-panel">
-
-              gaming list
-              <ul class="dropdown-panel-list">
-
-                <li class="menu-title">
-                  <a href="gaming-cate.html">Gaming</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">NVidia</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">AMD</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">Asus</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">MSI</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">GIGABYTE</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">ZOTAC</a>
-                </li>
-
-              </ul>
-
-              editing list
-              <ul class="dropdown-panel-list">
-
-                <li class="menu-title">
-                  <a href="editing-cate.html">Editing</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">AMD</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">Intel</a>
-                </li>
-
-              </ul>
-
-              Casual list
-              <ul class="dropdown-panel-list">
-
-                <li class="menu-title">
-                  <a href="casual-cate.html">Casual</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">All in one</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">Full set PC</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">PC Only</a>
-                </li>
-
-              </ul>
-
-              budget list
-              <ul class="dropdown-panel-list">
-
-                <li class="menu-title">
-                  <a href="budget-cate.html">Budget</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">ต่ำกว่า 19,990฿</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">20,000฿ - 29,990฿</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">30,000฿ - 39,990฿</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">40,000฿ - 49,990฿</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">50,000฿ - 59,990฿</a>
-                </li>
-
-                <li class="panel-list-item">
-                  <a href="#">60,000฿ ขึ้นไป</a>
-                </li>
-
-              </ul>
-
-            </div>
-
-          </li> -->
 
           <!-- gaming -->
           <li class="menu-category">
@@ -227,7 +113,7 @@
 
           <!-- Custom spec -->
           <li class="menu-category">
-            <a href="cuztom-page.html" class="menu-title">Customize</a>
+            <a class="menu-title" onclick="checkLoginCustom()">Customize</a>
           </li>
 
         </ul>
@@ -3006,6 +2892,24 @@
   </footer>
 
 
+  <!-- 
+    script
+   -->
+  <script>
+    // check login custom page
+    function checkLoginCustom() {
+      const email = localStorage.getItem("email")
+      console.log(email)
+      if (email) {
+        location.href = "./cuztom-page.html"
+      }
+      else {
+        location.href = "./login.html"
+
+      }
+
+    }
+  </script>
 
   <!--
     - custom js link

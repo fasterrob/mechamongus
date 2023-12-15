@@ -531,7 +531,7 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
 
 .header-main {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(10deg, #f07ae8, #53b2ff);
+  background: linear-gradient(10deg, #fff895, #fbb319);
   padding: 20px 0;
   border-bottom: 1px solid var(--cultured);
 }
@@ -859,20 +859,27 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
   /* background: -webkit-linear-gradient(10deg, #dc5cd4, #53b2ff); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;  */
-  color: #53b2ff;
-  font-size: var(--fs-7);
+  color: rgb(252, 231, 162);
+  font-size: 70px;
   font-weight: bold;
   text-transform: capitalize;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
+  letter-spacing: 1px;
+  margin-bottom: 1px;
 }
 
 .banner-title {
-  color: rgb(243, 243, 243);
-  font-size: var(--fs-1);
+  color: rgb(0, 0, 0);
+  font-size: 35px;
   text-transform: uppercase;
-  line-height: 1;
-  margin-bottom: 10px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.banner-title-btn {
+  color: #000000;
+  background-color: rgb(252, 231, 162);
+  border-radius: 100px;
+  padding: 10px;
 }
 
 .banner-text { display: none; }

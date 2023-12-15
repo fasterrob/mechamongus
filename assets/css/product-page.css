@@ -47,7 +47,7 @@
 }
 
 .detail h2 {
-    color: var(--salmon-pink);
+    color: #ff4870;
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 17px;
@@ -82,7 +82,7 @@
 }
 
 form button {
-    background-color: var(--salmon-pink);
+    background-color: #ff4870;;
     color: white;
     font-size: 17px;
     width: 100%;
@@ -94,7 +94,7 @@ form button {
 }
 
 form button:hover {
-    background-color: hsl(207, 73%, 58%);
+    background-color: #fd87a1;
 }
 
 .control {

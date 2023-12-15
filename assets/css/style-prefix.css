@@ -531,7 +531,7 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
 
 .header-main {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(10deg, #fff895, #fbb319);
+  background: linear-gradient(10deg, #ff4870, #ff93fd);
   padding: 20px 0;
   border-bottom: 1px solid var(--cultured);
 }
@@ -833,6 +833,7 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
           border-radius: var(--border-radius-md);
   overflow: hidden;
   scroll-snap-align: start;
+  padding-bottom: 30px;
 }
 
 .slider-item .banner-img {
@@ -845,12 +846,11 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
 }
 
 .banner-content {
-  background: hsla(0, 0%, 73%, 0.8);
   position: absolute;
   bottom: 25px;
   left: 25px;
   right: 25px;
-  padding: 20px 25px;
+  padding: 20px 25px 120px;
   -webkit-border-radius: var(--border-radius-md);
           border-radius: var(--border-radius-md);
 }
@@ -859,12 +859,14 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
   /* background: -webkit-linear-gradient(10deg, #dc5cd4, #53b2ff); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;  */
-  color: rgb(0, 0, 0);
+  color: #000000;
+  /* -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black; */
   font-size: 70px;
   font-weight: bold;
   text-transform: capitalize;
   letter-spacing: 1px;
-  margin-bottom: 0.5px;
+  margin-bottom: 0.1px;
 }
 
 .banner-title {
@@ -877,11 +879,16 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
 
 .banner-title-btn {
   color: #000000;
-  background-color: rgb(252, 231, 162);
+  background-color: #ff4870;
   border-radius: 100px;
-  padding: 15px;
+  padding: 7px 15px 7px 15px;
   font-weight: bold;
 }
+
+.banner-title-btn:hover {
+  color: #ffffff;
+}
+
 
 .banner-text { display: none; }
 
@@ -1099,6 +1106,10 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
   font-weight: var(--weight-500);
 }
 
+.sidebar .menu-title:hover {
+  color: #ff4870;
+}
+
 .sidebar-accordion-menu ion-icon {
   color: var(--sonic-silver);
   font-size: 14px;
@@ -1221,7 +1232,7 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
 }
 
 .product-minimal .showcase-title:hover {
-  color: var(--salmon-pink);
+  color: #ff4870;
 }
 
 .product-minimal .showcase-category {
@@ -1234,7 +1245,7 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
   margin-bottom: 3px;
 }
 
-.product-minimal .showcase-category:hover { color: var(--salmon-pink); }
+.product-minimal .showcase-category:hover { color: #ff4870; }
 
 .product-minimal .price-box {
   display: -webkit-box;
@@ -1251,7 +1262,7 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
 .product-minimal .price {
   font-size: var(--fs-7);
   font-weight: var(--weight-700);
-  color: var(--salmon-pink);
+  color: #ff4870;
 }
 
 .product-minimal .price-box del {
@@ -1484,7 +1495,7 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
 }
 
 .product-main-title:hover {
-color: var(--salmon-pink);
+color: #ff4870;
 }
 
 .product-grid {
@@ -1605,7 +1616,7 @@ color: var(--salmon-pink);
 .product-grid .showcase-content { padding: 15px 20px 0; }
 
 .product-grid .showcase-category {
-  color: var(--salmon-pink);
+  color: #ff4870;
   font-size: var(--fs-9);
   font-weight: var(--weight-500);
   text-transform: uppercase;
@@ -1613,7 +1624,7 @@ color: var(--salmon-pink);
 }
 
 .product-grid .showcase-category:hover {
-  color: var(--onyx);
+  color: #fdb2c2;
 }
 
 .product-grid .showcase-title {
@@ -1628,7 +1639,7 @@ color: var(--salmon-pink);
   transition: var(--transition-timing);
 }
 
-.product-grid .showcase-title:hover { color: var(--salmon-pink); }
+.product-grid .showcase-title:hover { color: #ff4870; }
 
 .product-grid .showcase-rating {
   display: -webkit-box;
@@ -2374,7 +2385,7 @@ footer {
     transition: var(--transition-timing);
   }
 
-  .desktop-menu-category-list .menu-category > .menu-title:hover { color: #fff895; }
+  .desktop-menu-category-list .menu-category > .menu-title:hover { color: #ff4870; text-decoration: none;}
   
   .desktop-menu-category-list .menu-category > .menu-title::after {
     content: '';
@@ -2383,7 +2394,7 @@ footer {
     left: 0;
     width: 100%;
     height: 2px;
-    background: #fff895;
+    background: #ff4870;
     -webkit-transform: scaleX(0);
         -ms-transform: scaleX(0);
             transform: scaleX(0);

@@ -10,7 +10,7 @@
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo/Blue-amongus-icon.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="./assets/assets_catomerce/3047928.png" type="image/x-icon" />
 
   <!--
     - custom css link
@@ -113,6 +113,11 @@
   .cancel-btn:hover {
     background-color: rgb(238, 0, 0) !important;
   }
+
+  .text-primary {
+    color: #ff4870 !important;
+  }
+
 </style>
 
 <body onload="getUser()">
@@ -127,7 +132,7 @@
     <div class="header-main">
       <div class="container">
         <a href="#" class="header-logo">
-          <img src="assets/images/logo/Blue-amongus-icon.png" alt="Anon's logo" width="36" height="36" />
+          <img src="assets/assets_catomerce/3047928.png" alt="Anon's logo" width="36" height="36" />
         </a>
 
         <div class="header-search-container">
@@ -140,15 +145,12 @@
 
         <div class="header-user-actions">
           <button class="action-btn" onclick="checkLogin()">
-            <ion-icon name="person-outline" style="color: aliceblue"></ion-icon>
+            <ion-icon name="person-outline" style="color: rgb(0, 0, 0)"></ion-icon>
           </button>
 
-          <button class="action-btn">
-            <a href="cart.html">
-              <ion-icon name="bag-handle-outline" style="color: aliceblue"></ion-icon>
-            </a>
-
-            <span class="count">0</span>
+          <button class="action-btn" onclick="checkLoginCart()">
+            <ion-icon name="bag-handle-outline" style="color: rgb(0, 0, 0)"></ion-icon>
+            <span class="count" id="count">0</span>
           </button>
         </div>
       </div>
@@ -157,10 +159,10 @@
     <!-- desktop navi header bar -->
     <nav class="desktop-navigation-menu">
       <div class="container">
-        <ul class="desktop-menu-category-list">
+        <ul class="desktop-menu-category-list" style="padding: 5px 0px 5px 0px;">
           <!-- Home -->
           <li class="menu-category">
-            <a href="index.html" class="menu-title">Home</a>
+            <a href="./index.html" class="menu-title">Home</a>
           </li>
 
           <!-- category -->
@@ -279,29 +281,33 @@
 
           <!-- gaming -->
           <li class="menu-category">
-            <a href="gaming-cate.html" class="menu-title">Gaming</a>
+            <a href="gaming-cate.html" class="menu-title">Toys</a>
           </li>
 
           <!-- editing -->
           <li class="menu-category">
-            <a href="editing-cate.html" class="menu-title">Editing</a>
+            <a href="editing-cate.html" class="menu-title">Food & Snacks</a>
           </li>
 
           <!-- casual -->
 
           <li class="menu-category">
-            <a href="casual-cate.html" class="menu-title">Casual</a>
+            <a href="editing-cate.html" class="menu-title">Pet cage</a>
           </li>
 
           <!-- budget -->
           <li class="menu-category">
-            <a href="budget-cate.html" class="menu-title">Budget</a>
+            <a href="budget-cate.html" class="menu-title">Cleaning Products</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="budget-cate.html" class="menu-title">Accessories</a>
           </li>
 
           <!-- Custom spec -->
-          <li class="menu-category">
+          <!--<li class="menu-category">
             <a class="menu-title" onclick="checkLoginCustom()">Customize</a>
-          </li>
+          </li>-->
         </ul>
       </div>
     </nav>
@@ -500,7 +506,7 @@
 
         <!-- spec custom mobile category -->
         <li class="menu-category">
-          <a href="cuztom-page.html" class="menu-title">Customize</a>
+          <a href="#" class="menu-title">Customize</a>
         </li>
 
         <!-- login mobile category -->
@@ -549,7 +555,7 @@
           <div class="card h-100">
             <div class="card-body">
               <div class="row gutters">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="color: #ff4870;">
                   <h6 class="mb-2 text-primary">Personal Details</h6>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
@@ -580,7 +586,7 @@
               </div>
               <div class="row gutters">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                  <h6 class="mt-3 mb-2 text-primary">Address</h6>
+                  <h6 class="mt-3 mb-2 text-primary" style="color: #ff4870;">Address</h6>
                 </div>
                 <div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                   <textarea class="form-control" id="address" value="" rows="3"></textarea>

@@ -2,91 +2,74 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mechamongus</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catomerce</title>
 
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo/Blue-amongus-icon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./assets/assets_catomerce/3047928.png" type="image/x-icon" />
 
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style-prefix.css">
+  <link rel="stylesheet" href="./assets/css/style-prefix.css" />
   <!-- <link rel="stylesheet" href="assets/css/toggle-dark.css"> -->
 
   <!--
     - google font link
   -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-
+    rel="stylesheet" />
 </head>
 
-<body>
-
-
+<body onload="getData()">
   <div class="overlay" data-overlay></div>
-
 
   <!--
     - HEADER
   -->
 
   <header>
-
     <!-- header main -->
     <div class="header-main">
-
       <div class="container">
-
         <a href="#" class="header-logo">
-          <img src="assets/images/logo/Blue-amongus-icon.png" alt="Anon's logo" width="36" height="36">
+          <img src="assets/assets_catomerce/3047928.png" alt="Anon's logo" width="36" height="36" />
         </a>
 
         <div class="header-search-container">
-
-          <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
+          <input type="search" name="search" class="search-field" placeholder="Enter your product name..." />
 
           <button class="search-btn">
             <ion-icon name="search-outline"></ion-icon>
           </button>
-
         </div>
 
         <div class="header-user-actions">
-
           <button class="action-btn" onclick="checkLogin()">
-            <ion-icon name="person-outline" style="color: aliceblue;"></ion-icon>
+            <ion-icon name="person-outline" style="color: rgb(0, 0, 0)"></ion-icon>
           </button>
 
           <button class="action-btn" onclick="checkLoginCart()">
-            <ion-icon name="bag-handle-outline" style="color: aliceblue;"></ion-icon>
-
-            <span class="count">0</span>
+            <ion-icon name="bag-handle-outline" style="color: rgb(0, 0, 0)"></ion-icon>
+            <span class="count" id="count">0</span>
           </button>
-
         </div>
-
       </div>
-
     </div>
 
     <!-- desktop navi header bar -->
     <nav class="desktop-navigation-menu">
-
       <div class="container">
-
-        <ul class="desktop-menu-category-list">
-
+        <ul class="desktop-menu-category-list" style="padding: 5px 0px 5px 0px;">
           <!-- Home -->
           <li class="menu-category">
-            <a href="index.html" class="menu-title">Home</a>
+            <a href="./index.html" class="menu-title">Home</a>
           </li>
 
           <!-- category -->
@@ -205,39 +188,39 @@
 
           <!-- gaming -->
           <li class="menu-category">
-            <a href="gaming-cate.html" class="menu-title">Gaming</a>
+            <a href="gaming-cate.html" class="menu-title">Toys</a>
           </li>
 
           <!-- editing -->
           <li class="menu-category">
-            <a href="editing-cate.html" class="menu-title">Editing</a>
+            <a href="editing-cate.html" class="menu-title">Food & Snacks</a>
           </li>
 
           <!-- casual -->
 
           <li class="menu-category">
-            <a href="casual-cate.html" class="menu-title">Casual</a>
+            <a href="editing-cate.html" class="menu-title">Pet cage</a>
           </li>
 
           <!-- budget -->
           <li class="menu-category">
-            <a href="budget-cate.html" class="menu-title">Budget</a>
+            <a href="budget-cate.html" class="menu-title">Cleaning Products</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="budget-cate.html" class="menu-title">Accessories</a>
           </li>
 
           <!-- Custom spec -->
-          <li class="menu-category">
+          <!--<li class="menu-category">
             <a class="menu-title" onclick="checkLoginCustom()">Customize</a>
-          </li>
-
+          </li>-->
         </ul>
-
       </div>
-
     </nav>
 
     <!-- resposive navi -->
     <div class="mobile-bottom-navigation">
-
       <button class="action-btn" data-mobile-menu-open-btn>
         <ion-icon name="menu-outline"></ion-icon>
       </button>
@@ -254,14 +237,11 @@
         <a href="index.html">
           <ion-icon name="home-outline"></ion-icon>
         </a>
-
       </button>
-
     </div>
 
     <!-- mobile category -->
-    <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
-
+    <nav class="mobile-navigation-menu has-scrollbar" data-mobile-menu>
       <div class="menu-top">
         <h2 class="menu-title">Menu</h2>
 
@@ -271,7 +251,6 @@
       </div>
 
       <ul class="mobile-menu-category-list">
-
         <!-- gaming mobile category
         <li class="menu-category">
 
@@ -434,27 +413,22 @@
 
         <!-- spec custom mobile category -->
         <li class="menu-category">
-          <a href="cuztom-page.html" class="menu-title">Customize</a>
+          <a href="#" class="menu-title">Customize</a>
         </li>
 
         <!-- login mobile category -->
         <li class="menu-category">
           <a href="login.html" class="menu-title">Login</a>
         </li>
-
       </ul>
 
       <div class="menu-bottom">
-
         <!-- mobile cate social icon -->
         <ul class="menu-category-list">
-
-          <li class="menu-category">
-
+          <li class="menu-category"></li>
         </ul>
 
         <ul class="menu-social-container">
-
           <li>
             <a href="#" class="social-link">
               <ion-icon name="logo-facebook"></ion-icon>
@@ -472,14 +446,9 @@
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
           </li>
-
-
         </ul>
-
       </div>
-
     </nav>
-
   </header>
 
 
@@ -504,13 +473,13 @@
           - SIDEBAR
         -->
 
-        <div class="sidebar  has-scrollbar" data-mobile-menu>
-
+        <div class="sidebar has-scrollbar" data-mobile-menu>
           <!-- sidebar category -->
           <div class="sidebar-category">
-
             <div class="sidebar-top">
-              <h2 class="sidebar-title" style="font-weight: bold;">Category</h2>
+              <h2 class="sidebar-title" style="font-weight: bold">
+                Category
+              </h2>
 
               <button class="sidebar-close-btn" data-mobile-menu-close-btn>
                 <ion-icon name="close-outline"></ion-icon>
@@ -518,261 +487,232 @@
             </div>
 
             <ul class="sidebar-menu-category-list">
-
               <!-- Gaming sidebar category -->
               <li class="sidebar-menu-category">
-
                 <button class="sidebar-accordion-menu" data-accordion-btn>
-
                   <div class="menu-title-flex">
-                    <img src="./assets/images/logo/gaming-sidebar-cate.png" alt="clothes" class="menu-title-img"
-                      width="20" height="20">
+                    <img src="./assets/assets_catomerce/dog-toy.png" alt="clothes" class="menu-title-img" width="20"
+                      height="20" />
 
                     <a href="gaming-cate.html">
-                      <p class="menu-title">Gaming</p>
+                      <p class="menu-title">Toys</p>
                     </a>
-
                   </div>
 
                   <!-- <div>
-                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-                  </div> -->
-
+                  <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                  <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                </div> -->
                 </button>
 
                 <!-- <ul class="sidebar-submenu-category-list" data-accordion>
 
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">Nvidia</p>
-                      <data value="#" class="stock" title="Available Stock"></data>
-                    </a>
-                  </li>
+                <li class="sidebar-submenu-category">
+                  <a href="#" class="sidebar-submenu-title">
+                    <p class="product-name">Nvidia</p>
+                    <data value="#" class="stock" title="Available Stock"></data>
+                  </a>
+                </li>
 
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">AMD</p>
-                      <data value="#" class="stock" title="Available Stock"></data>
-                    </a>
-                  </li>
+                <li class="sidebar-submenu-category">
+                  <a href="#" class="sidebar-submenu-title">
+                    <p class="product-name">AMD</p>
+                    <data value="#" class="stock" title="Available Stock"></data>
+                  </a>
+                </li>
 
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">Asus</p>
-                      <data value="#" class="stock" title="Available Stock"></data>
-                    </a>
-                  </li>
+                <li class="sidebar-submenu-category">
+                  <a href="#" class="sidebar-submenu-title">
+                    <p class="product-name">Asus</p>
+                    <data value="#" class="stock" title="Available Stock"></data>
+                  </a>
+                </li>
 
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">MSI</p>
-                      <data value="#" class="stock" title="Available Stock"></data>
-                    </a>
-                  </li>
+                <li class="sidebar-submenu-category">
+                  <a href="#" class="sidebar-submenu-title">
+                    <p class="product-name">MSI</p>
+                    <data value="#" class="stock" title="Available Stock"></data>
+                  </a>
+                </li>
 
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">GIGABYTE</p>
-                      <data value="#" class="stock" title="Available Stock"></data>
-                    </a>
-                  </li>
+                <li class="sidebar-submenu-category">
+                  <a href="#" class="sidebar-submenu-title">
+                    <p class="product-name">GIGABYTE</p>
+                    <data value="#" class="stock" title="Available Stock"></data>
+                  </a>
+                </li>
 
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">ZOTAC</p>
-                      <data value="#" class="stock" title="Available Stock"></data>
-                    </a>
-                  </li>
+                <li class="sidebar-submenu-category">
+                  <a href="#" class="sidebar-submenu-title">
+                    <p class="product-name">ZOTAC</p>
+                    <data value="#" class="stock" title="Available Stock"></data>
+                  </a>
+                </li>
 
-                </ul> -->
-
+              </ul> -->
               </li>
 
               <!-- editing sidebar category -->
               <li class="sidebar-menu-category">
-
                 <button class="sidebar-accordion-menu" data-accordion-btn>
-
                   <div class="menu-title-flex">
-                    <img src="./assets/images/logo/editing-sidebar-cate.png" alt="perfume" class="menu-title-img"
-                      width="20" height="20">
+                    <img src="./assets/assets_catomerce/pet-food.png" alt="perfume" class="menu-title-img" width="20"
+                      height="20" />
 
                     <a href="editing-cate.html">
-                      <p class="menu-title">Editing</p>
+                      <p class="menu-title">Food & Snacks</p>
                     </a>
-
                   </div>
 
                   <!-- <div>
-                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-                  </div> -->
-
+                  <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                  <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                </div> -->
                 </button>
 
                 <!-- <ul class="sidebar-submenu-category-list" data-accordion>
 
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">AMD</p>
-                      <data value="#" class="stock" title="Available Stock"></data>
-                    </a>
-                  </li>
+                <li class="sidebar-submenu-category">
+                  <a href="#" class="sidebar-submenu-title">
+                    <p class="product-name">AMD</p>
+                    <data value="#" class="stock" title="Available Stock"></data>
+                  </a>
+                </li>
 
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">Intel</p>
-                      <data value="#" class="stock" title="Available Stock"></data>
-                    </a>
-                  </li>
+                <li class="sidebar-submenu-category">
+                  <a href="#" class="sidebar-submenu-title">
+                    <p class="product-name">Intel</p>
+                    <data value="#" class="stock" title="Available Stock"></data>
+                  </a>
+                </li>
 
-                </ul> -->
-
+              </ul> -->
               </li>
 
               <!-- Casual sidebar category -->
               <li class="sidebar-menu-category">
-
                 <button class="sidebar-accordion-menu" data-accordion-btn>
-
                   <div class="menu-title-flex">
-                    <img src="./assets/images/logo/casual-sidebar-cate.png" alt="cosmetics" class="menu-title-img"
-                      width="20" height="20">
+                    <img src="./assets/assets_catomerce/pet-carrier.png" alt="cosmetics" class="menu-title-img"
+                      width="20" height="20" />
 
                     <a href="casual-cate.html">
-                      <p class="menu-title">Casual</p>
+                      <p class="menu-title">Pet Cage</p>
                     </a>
-
                   </div>
 
                   <!-- <div>
-                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-                  </div> -->
-
+                  <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                  <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                </div> -->
                 </button>
 
                 <!-- <ul class="sidebar-submenu-category-list" data-accordion>
 
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">All in one</p>
-                      <data value="#" class="stock" title="Available Stock"></data>
-                    </a>
-                  </li>
+                <li class="sidebar-submenu-category">
+                  <a href="#" class="sidebar-submenu-title">
+                    <p class="product-name">All in one</p>
+                    <data value="#" class="stock" title="Available Stock"></data>
+                  </a>
+                </li>
 
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">Full set PC</p>
-                      <data value="#" class="stock" title="Available Stock"></data>
-                    </a>
-                  </li>
+                <li class="sidebar-submenu-category">
+                  <a href="#" class="sidebar-submenu-title">
+                    <p class="product-name">Full set PC</p>
+                    <data value="#" class="stock" title="Available Stock"></data>
+                  </a>
+                </li>
 
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">PC only</p>
-                      <data value="#" class="stock" title="Available Stock"></data>
-                    </a>
-                  </li>
+                <li class="sidebar-submenu-category">
+                  <a href="#" class="sidebar-submenu-title">
+                    <p class="product-name">PC only</p>
+                    <data value="#" class="stock" title="Available Stock"></data>
+                  </a>
+                </li>
 
-                </ul> -->
-
+              </ul> -->
               </li>
 
               <!-- Budget sidebar category -->
               <li class="sidebar-menu-category">
-
                 <button class="sidebar-accordion-menu" data-accordion-btn>
-
                   <div class="menu-title-flex">
-                    <img src="./assets/images/logo/budget-sidebar-cate.png" alt="clothes" class="menu-title-img"
-                      width="20" height="20">
+                    <img src="./assets/assets_catomerce/basket.png" alt="clothes" class="menu-title-img" width="20"
+                      height="20" />
 
                     <a href="budget-cate.html">
-                      <p class="menu-title">Budget</p>
+                      <p class="menu-title">Cleaning Products</p>
                     </a>
-
                   </div>
 
                   <!-- <div>
-                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-                  </div> -->
-
+                  <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                  <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                </div> -->
                 </button>
 
                 <!-- <ul class="sidebar-submenu-category-list" data-accordion>
 
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">ต่ำกว่า 19,990฿</p>
-                      <data value="#" class="stock" title="Available Stock"></data>
-                    </a>
-                  </li>
+                <li class="sidebar-submenu-category">
+                  <a href="#" class="sidebar-submenu-title">
+                    <p class="product-name">ต่ำกว่า 19,990฿</p>
+                    <data value="#" class="stock" title="Available Stock"></data>
+                  </a>
+                </li>
 
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">20,000฿ - 29,990฿</p>
-                      <data value="#" class="stock" title="Available Stock"></data>
-                    </a>
-                  </li>
+                <li class="sidebar-submenu-category">
+                  <a href="#" class="sidebar-submenu-title">
+                    <p class="product-name">20,000฿ - 29,990฿</p>
+                    <data value="#" class="stock" title="Available Stock"></data>
+                  </a>
+                </li>
 
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">30,000฿ - 39,990฿</p>
-                      <data value="#" class="stock" title="Available Stock"></data>
-                    </a>
-                  </li>
+                <li class="sidebar-submenu-category">
+                  <a href="#" class="sidebar-submenu-title">
+                    <p class="product-name">30,000฿ - 39,990฿</p>
+                    <data value="#" class="stock" title="Available Stock"></data>
+                  </a>
+                </li>
 
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">40,000฿ - 49,990฿</p>
-                      <data value="#" class="stock" title="Available Stock"></data>
-                    </a>
-                  </li>
+                <li class="sidebar-submenu-category">
+                  <a href="#" class="sidebar-submenu-title">
+                    <p class="product-name">40,000฿ - 49,990฿</p>
+                    <data value="#" class="stock" title="Available Stock"></data>
+                  </a>
+                </li>
 
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">50,000฿ - 59,990฿</p>
-                      <data value="#" class="stock" title="Available Stock"></data>
-                    </a>
-                  </li>
+                <li class="sidebar-submenu-category">
+                  <a href="#" class="sidebar-submenu-title">
+                    <p class="product-name">50,000฿ - 59,990฿</p>
+                    <data value="#" class="stock" title="Available Stock"></data>
+                  </a>
+                </li>
 
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">60,000฿ ขึ้นไป</p>
-                      <data value="#" class="stock" title="Available Stock"></data>
-                    </a>
-                  </li>
+                <li class="sidebar-submenu-category">
+                  <a href="#" class="sidebar-submenu-title">
+                    <p class="product-name">60,000฿ ขึ้นไป</p>
+                    <data value="#" class="stock" title="Available Stock"></data>
+                  </a>
+                </li>
 
-                </ul> -->
-
+              </ul> -->
               </li>
 
               <!-- Spec custom page sidebar category -->
               <li class="sidebar-menu-category">
-
                 <button class="sidebar-accordion-menu" data-accordion-btn>
-
                   <div class="menu-title-flex">
-                    <img src="./assets/images/logo/custom-sidebar-cate.png" alt="glasses" class="menu-title-img"
-                      width="20" height="20">
+                    <img src="./assets/assets_catomerce/collar.png" alt="glasses" class="menu-title-img" width="20"
+                      height="20" />
 
-                    <a href="cuztom-page.html">
-                      <p class="menu-title">Customize</p>
+                    <a href="#">
+                      <p class="menu-title">Accessories</p>
                     </a>
-
                   </div>
-
                 </button>
-
               </li>
-
             </ul>
-
           </div>
-
         </div>
 
 

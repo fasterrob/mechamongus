@@ -57,7 +57,7 @@
 
           <button class="action-btn" onclick="checkLoginCart()">
             <ion-icon name="bag-handle-outline" style="color: rgb(0, 0, 0)"></ion-icon>
-            <span class="count" id="count">0</span>
+            <span class="count" id="countCart">0</span>
           </button>
         </div>
       </div>
@@ -926,7 +926,7 @@
                       <ion-icon name="heart-outline"></ion-icon>
                       </button> -->
 
-                      <button class="btn-action">
+                      <button class="btn-action" onclick="addCart()">
                         <ion-icon name="bag-add-outline"></ion-icon>
                       </button>
                     </div>
@@ -1942,11 +1942,11 @@
   async function addCart() {
     const userId = localStorage.getItem("id");
     let product = {
-      productName: "ASUS ROG STRIX G35CA-1390KF082W",
-      type: "Gaming",
-      desc: "• Intel Core i9-13900KF • 32GB DDR5 • 1TB SSD M.2 PCIe 4.0 NVMe • Nvidia GeForce RTX4080 16GB • Windows 11 Home • 3 Years Onsite Warranty",
+      productName: "ไม้ล่อแมว",
+      type: "Toys",
+      // desc: "• Intel Core i9-13900KF • 32GB DDR5 • 1TB SSD M.2 PCIe 4.0 NVMe • Nvidia GeForce RTX4080 16GB • Windows 11 Home • 3 Years Onsite Warranty",
       quantity: 1,
-      price: 124990,
+      price: 25,
     };
     try {
       const cart = await axios.get(
